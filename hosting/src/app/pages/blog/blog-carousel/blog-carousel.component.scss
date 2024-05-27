@@ -1,0 +1,17 @@
+.img-wrapper {
+  position: relative;
+  height: 0;
+  padding-top: 40%;
+  &::after {
+    content:'';
+    position:absolute;
+    left:0; top:0;
+    width:100%; height:100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.856), transparent);
+  }
+}
+
+.img-wrapper>img {
+  position: absolute;
+  inset: 0;
+}

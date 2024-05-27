@@ -1,0 +1,35 @@
+@use "../../../../palette";
+
+.page-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  min-height: 100vh;
+  background-color: inherit;
+  color: inherit;
+}
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: inherit;
+  color: inherit;
+}
+
+.header-deco {
+  position: relative;
+  top: -24px;
+  right: -12px;
+  font-size: 16px;
+}
+
+.page-content {
+  // flex-grow: 1;
+  background-color: palette.$c-secondary;
+}
+
+.bg-inherit {
+  background: inherit;
+}

@@ -1,0 +1,23 @@
+@use "../../../palette";
+
+.theme-about {
+  background-color: palette.$c-about;
+  color: palette.$c-primary;
+}
+
+.banner {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.banner-logo {
+  position: relative;
+  float: right;
+  margin-top: -25%;
+  left: -1rem;
+  width: 30%;
+}
+
+.banner-logo>object {
+  filter: invert(62%) sepia(49%) saturate(4383%) hue-rotate(4deg) brightness(112%) contrast(102%);
+}

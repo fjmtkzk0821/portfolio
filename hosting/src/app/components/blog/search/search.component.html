@@ -1,0 +1,10 @@
+<div class="container-fluid p-0">
+  <div class="alert alert-success" role="alert">
+    {{resultMessage}}
+  </div>
+  <div class="row gy-3">
+    <div class="col-12" *ngFor="let article of articles">
+      <app-post [article]="article"></app-post>
+    </div>
+  </div>
+</div>

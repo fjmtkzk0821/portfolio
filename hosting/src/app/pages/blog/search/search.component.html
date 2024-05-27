@@ -1,0 +1,31 @@
+<app-default-layout class="theme-blog" header="Search" subheader="検索">
+  <div class="container-fluid blog-container min-vh-100">
+    <div class="row gy-3">
+      <div class="col-12">
+        <div class="card my-3">
+          <div class="card-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-12 col-md-8">
+                  <blog-section-search [articles]="articles" [queryParams]="queryParams" />
+                </div>
+                <div class="col-sm-12 col-md-4">
+                  <app-block-section header="CATEGORIES">
+                    <app-categories [tags]="tags" />
+                  </app-block-section>
+                  <app-block-section header="ARCHIVE">
+                    <app-archive [archives]="archives" />
+                  </app-block-section>
+                  <app-block-section header="INSTAGRAM">
+                    <app-instagram-embed></app-instagram-embed>
+                  </app-block-section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer class="footer-filter"></app-footer>
+</app-default-layout>

@@ -1,0 +1,66 @@
+<app-default-layout class="theme-about" header="about" subheader="プロフィール">
+  <div class="d-flex flex-column">
+    <!-- <div class="banner"></div> -->
+    <div class="container py-5 px-4">
+      <div class="row g-3 my-5">
+        <div class="col-sm-12 col-md-7 order-1 order-md-0">
+          <p class="fs-4">こんにちは、私は</p>
+          <h2 class="display-2"><strong>カズキ</strong></h2>
+          <h3 class="display-5">プログラマーです。</h3>
+          <p class="fs-5">Born in Hong Kong. Working in Japan.</p>
+          <p class="fs-5">Develop different projects as a hobby after work.</p>
+          <p class="fs-5">But I would rather say I am still a junior in the IT industry.</p>
+          <p class="fs-5">Anime & Game lover.</p>
+        </div>
+        <div class="col-sm-12 col-md-5 order-0 order-md-1">
+          <picture>
+            <img class="banner rounded" src="/assets/images/banner.jpg" alt="banner">
+            <div class="card default-card banner-logo">
+              <object data="/assets/images/logo.svg" type="image/svg+xml"></object>
+            </div>
+          </picture>
+        </div>
+      </div>
+      <div class="row g-3">
+        <!-- <div class="col-12">
+          <app-page-section header="My services" subheader="していること">
+            <div class="container-fluid">
+              <div class="row g-3">
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                  <app-service-card title="Web Develop" subtitle="web development">
+                    <p class="card-text lh-base fs-5"> Web designers craft the overall vision & plan for a website
+                      layout. Professional logo development: Business, Company, or Personal. </p>
+                  </app-service-card>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                  <app-service-card title="Android Application" subtitle="app development">
+                    <p class="card-text lh-base fs-5">Design Software applications to run on mobile devices. Modern and
+                      mobile-ready application that will help you reach all of your marketing.</p>
+                  </app-service-card>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                  <app-service-card title="Unity & Unreal Engine" subtitle="game development">
+                    <p class="card-text lh-base fs-5"> Creating games & describes the design, development and release of
+                      a game. Developing unique mobile android and ios games. </p>
+                  </app-service-card>
+                </div>
+              </div>
+            </div>
+          </app-page-section>
+        </div> -->
+        <div class="col-12">
+          <app-page-section header="Languages & Frameworks" subheader="最近勉強している言語やフレームワークを紹介します。">
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+              <div class="card default-card" *ngFor="let item of langFrameList">
+                <div class="card-body text-center">
+                  <i [className]="'devicon-'+item+'-plain lh-base display-6'"></i>
+                </div>
+              </div>
+            </div>
+          </app-page-section>
+        </div>
+      </div>
+    </div>
+    <app-footer class="footer-filter"></app-footer>
+  </div>
+</app-default-layout>

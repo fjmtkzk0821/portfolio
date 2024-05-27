@@ -1,0 +1,6 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb bc-default justify-content-end my-3 fs-6">
+    <li class="breadcrumb-item" *ngFor="let p of paths; let i=index; let isLast=last"><a *ngIf="!isLast" [routerLink]="[concatPath(i)]"
+      routerLinkActive="active">{{pathLib[p] ?? p}}</a>{{isLast?pathLib[p] ?? p:''}}</li>
+  </ol>
+</nav>

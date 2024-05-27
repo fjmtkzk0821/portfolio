@@ -1,0 +1,134 @@
+@use '../../../../palette';
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+
+.bg-default {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/assets/images/home_banner.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(50%);
+  z-index: -999;
+}
+
+.bg-default:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(#000000c4 33%, #0000001c 33%);
+  background-size: 3px 3px;
+}
+
+.menu-panel {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100%;
+  width: 4.5rem;
+  height: 100%;
+  border-right: 1px solid;
+  transition: background-color 0.5s, color 0.5s;
+  color: palette.$c-secondary;
+  border-color: palette.$c-secondary;
+}
+
+.main-container {
+  flex-grow: 1;
+  overflow: auto;
+}
+// .main-container::-webkit-scrollbar {
+//   display: none;
+// }
+
+.menu-active, .menu-active > hr, .panel-container {
+  background-color: palette.$c-secondary;
+  color: palette.$c-primary;
+  border-color: palette.$c-primary;
+}
+
+.menu-btn {
+  color: palette.$c-secondary;
+  border-radius: 0 !important;
+}
+.menu-active .menu-btn {
+  color: palette.$c-primary;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.panel {
+  width: 100%;
+  height: 100%;
+}
+.panel>.panel-container {
+  display: flex;
+  height: inherit;
+  flex-direction: column;
+  // transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.panel>.panel-container.active {
+  // visibility: visible;
+  // opacity: 1;
+}
+
+.panel>.panel-container .panel-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  text-transform: uppercase;
+  &:nth-child(1) {
+    background-color: #cecdd6;
+    color: palette.$c-primary;
+  }
+  &:nth-child(2) {
+    background-color: #c5c5cb;
+    color: palette.$c-primary;
+  }
+  &:nth-child(3) {
+    background-color: #9b9ba7;
+    color: palette.$c-primary;
+  }
+  &:nth-child(4) {
+    background-color: #3d4853;
+    color: palette.$c-secondary;
+  }
+  &:nth-child(5) {
+    background-color: #2c2c36;
+    color: palette.$c-secondary;
+  }
+}
+
+.collapse-overlay {
+  position: absolute !important;
+  height: 100%;
+  left: 4.5rem;
+  right: 0;
+  // transition: width 0.5s ease 0.3s;
+  z-index: 999;
+}
+
+@include media-breakpoint-up(lg) {
+  .panel>.panel-container {
+    flex-direction: row;
+  }
+}

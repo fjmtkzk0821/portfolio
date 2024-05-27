@@ -1,0 +1,33 @@
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+
+.card {
+  background-image: url('/assets/images/logo.svg');
+    background-size: 256px;
+    background-repeat: no-repeat;
+    background-position: right -64px top -96px;
+  .card-body {
+    padding: 1.5rem;
+  }
+}
+
+.thumb-container{
+  margin-right: 1rem !important;
+  .thumb {
+    object-fit: cover;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .card-body {
+    flex-direction: column-reverse;
+  }
+  .thumb-container {
+    margin-right: 0 !important;
+    margin-top: 1rem !important;
+    .thumb {
+      width: 100%;
+    }
+  }
+}

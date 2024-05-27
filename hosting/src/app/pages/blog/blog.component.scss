@@ -1,0 +1,12 @@
+@use '../../../palette';
+
+.banner {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+}
+
+.blog-container {
+  margin-top: -64px;
+  color: palette.$c-primary
+}

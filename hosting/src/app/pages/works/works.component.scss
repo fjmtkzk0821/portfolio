@@ -1,0 +1,7 @@
+ul.nav .nav-item .nav-link {
+  font-weight: 600;
+  color: #4a476c;
+  &.active {
+    color: var(--bs-nav-underline-link-active-color);
+  }
+}

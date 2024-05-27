@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+
+@use './palette';
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  // font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: 'Rajdhani', 'Noto Sans JP', sans-serif!important; //
+  color: palette.$c-secondary;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+}
+
+.c-ws {
+  color: palette.$c-secondary;
+  border-color: palette.$c-secondary;
+}
+
+.default-card {
+  background: palette.$c-primary !important;
+  // border: 2px ridge #7d7c7c;
+}
+
+.default-card .card-body {
+  // border: 1px solid #121212;
+  // border-radius: 3px;
+  color: palette.$c-secondary !important;
+}
+
+.seperator {
+  color: transparent;
+  border-top: 3px groove #606060;
+  border-right: 3px groove #606060;
+}
+
+.footer-filter {
+  filter: invert(0.8);
+}
+
+//page theme
+
+.theme-works {
+  background-color: palette.$c-works;
+  color: palette.$c-primary;
+}
+.theme-blog {
+  background-color: palette.$c-blog;
+  color: palette.$c-secondary;
+}
+.theme-contact {
+  background-color: palette.$c-contact;
+  color: palette.$c-secondary;
+}
+.theme-article {
+  background-color: palette.$c-secondary;
+  color: palette.$c-primary;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import 'node_modules/bootstrap-icons/font/bootstrap-icons.css';
+
+/* Importing Bootstrap SCSS file. */
+
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+@import 'node_modules/bootstrap/scss/bootstrap';

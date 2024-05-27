@@ -1,0 +1,27 @@
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+
+.thumb-container {
+  padding-left: 16px;
+  .thumb {
+    object-fit: cover;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .card {
+    .card-body {
+      flex-direction: column;
+    }
+  }
+
+  .thumb-container {
+    padding-left: 0;
+    padding-top: 16px;
+    .thumb {
+      width: 100%;
+    }
+  }
+
+}

@@ -1,0 +1,19 @@
+@use '../../../../palette';
+
+.section-header {
+  width: 100%;
+  text-align: left !important;
+  border-bottom: #e9ecef 1px solid;
+  text-transform: uppercase;
+  font-weight: 600;
+  // &::after {
+  //   content: "";
+  //   display: block;
+  //   width: 12px;
+  //   height: 2px;
+  //   background: #262626;
+  //   left: 105%;
+  //   bottom: 8px;
+  //   position: relative;
+  // }
+}

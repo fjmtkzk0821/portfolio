@@ -1,0 +1,30 @@
+@use "../../../palette";
+
+.slogan {
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.home-container {
+  background-color: palette.$c-primary;
+}
+
+.social-network-link {
+  font-size: 32px;
+}
+
+.logo-container {
+  position: absolute;
+  top: 0;
+  right: 32px;
+  width: auto;
+  background-color: palette.$c-secondary;
+}
+
+.logo {
+  width: 64px;
+  filter: invert(10%) sepia(0%) saturate(1576%) hue-rotate(192deg) brightness(94%) contrast(87%);
+}

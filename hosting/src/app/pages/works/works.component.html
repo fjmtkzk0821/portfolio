@@ -1,0 +1,23 @@
+<app-default-layout class="theme-works" [backgroundInherit]="true" header="works" subheader="創造物">
+  <div class="container-fluid min-vh-100 p-5">
+    <div class="row">
+      <div class="col-12">
+        <ul class="nav nav-underline mb-5 fs-5">
+          <li *ngFor="let type of types" class="nav-item">
+            <a [ngClass]="{'nav-link': true, 'active': selectedType == type.id}"
+              (click)="filter(type.id)">{{type.name}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row gy-3">
+      <div *ngIf="filtered.length == 0" class="col-12">
+        <app-no-content-block />
+      </div>
+      <div *ngFor="let work of filtered" class="col-12">
+        <work-item [work]="work"></work-item>
+      </div>
+    </div>
+  </div>
+  <app-footer class="footer-filter"></app-footer>
+</app-default-layout>

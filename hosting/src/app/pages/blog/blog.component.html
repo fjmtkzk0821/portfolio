@@ -1,0 +1,37 @@
+<app-default-layout class="theme-blog" header="blog" subheader="ブログ">
+  <div class="image-wapper"><img src="/assets/images/blog_banner.jpg" class="banner"></div>
+  <div class="container-fluid blog-container min-vh-100">
+    <div class="row gy-3">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-12 col-md-8">
+                  <app-block-section header="RECENT">
+                    <app-recent [articles]="articles" />
+                    <app-no-content-block *ngIf="articles.length == 0" />
+                  </app-block-section>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                  <app-block-section header="CATEGORIES">
+                    <app-categories [tags]="tags" />
+                    <app-no-content-block *ngIf="tags.length == 0" />
+                  </app-block-section>
+                  <app-block-section header="ARCHIVE">
+                    <app-archive [archives]="archives" />
+                    <app-no-content-block *ngIf="archives.length == 0" />
+                  </app-block-section>
+                  <app-block-section header="INSTAGRAM">
+                    <app-instagram-embed></app-instagram-embed>
+                  </app-block-section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer class="footer-filter"></app-footer>
+</app-default-layout>
